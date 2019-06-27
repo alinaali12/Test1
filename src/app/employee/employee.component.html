@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.column {
+  float: left;
+  padding-left: 1px;
+  width: 310px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+</style>
+</head>
+
+<body>
+  <h2>Employee List</h2>
+  <ul *ngFor="let employee of employees">
+     <li>{{employee.name}}<li>
+  </ul>
+  <br>
+  <input [id]="empName" type="text" value="Name">  
+  <input disabled=false id={{empName}} type="text" value={{empName}}>
+
+  <div class="row">
+    <div class="column">
+      <h2 style="background-color:darkgrey">ID</h2>
+      <p>Some text..</p>
+    </div>
+    <div class="column">
+      <h2 style="background-color: darkgrey">Name</h2>
+      <p>Some text..</p>
+    </div >
+    <div class="column">
+      <h2 style="background-color: darkgrey">Age</h2>
+      <p>Some text..</p>
+    </div>
+  </div>
+
+</body>
+</html>

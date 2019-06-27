@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.column {
+  float: left;
+  padding-left: 1px;
+  padding-top: 0px;
+  width: 310px;
+  height: 30px; /* Should be removed. Only for demonstration */
+}
+.content-row{
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.body{
+  margin:0 auto; 
+}
+
+
+
+.content
+{
+  background-color:lightgray;
+}
+</style>
+</head>
+
+<body >
+    <h2>Employee Details</h2>
+    <li>{{employee.id}}.{{employee.name}},{{employee.age}}<li>
+
+<div class="row">
+  <div class="column">
+    <h2 style="background-color:darkgrey">ID</h2>
+  </div>
+  <div class="column">
+    <h2 style="background-color: darkgrey">Name</h2>
+  </div >
+  <div class="column">
+    <h2 style="background-color: darkgrey">Age</h2>
+  </div>
+</div>
+
+<ol *ngFor="let employee of employees">
+  <div class="content-row">
+    <li>
+      <div class="column" style="background-color:lightgray">
+        <p class="content">
+          {{employee.id}}
+        </p>
+      </div>
+      <div class="column" style="background-color:lightgray">
+          <p class="content">
+            {{employee.name}}
+          </p>
+      </div >
+      <div class="column" style="background-color:lightgray">
+        <p class="content">
+          {{employee.age}}
+        </p>
+      </div>
+    </li>
+    </div>
+</ol>
+
+</body>
+</html>
